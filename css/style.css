@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap");
+* {
+  font-family: "Cairo", sans-serif;
+  margin: 0; }
+
+p {
+  color: #737377; }
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 1.5; }
+
+h3 {
+  font-size: 1.5rem; }
+
+button {
+  padding: 1rem 3.5rem;
+  margin-top: 1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px; }
+
+
+.myHeader {
+  color: white;
+  height: 62.5rem;
+  padding: 2rem 5rem;
+  margin-bottom: 7.5rem;
+  background-image: url("../assets/img/banner/home-banner.jpg");
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: unset; }
+  .navbar .navbar__links {
+    list-style: none;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    justify-content: unset;
+    align-items: unset; }
+    .navbar .navbar__links li {
+      padding: 5px 20px; }
+      .navbar .navbar__links li a {
+        text-decoration: none;
+        color: white; }
+
+.explore__section, .pricing__section .pricing__container .pricing__item .pricing__item__title, .testimonials__section .pricing__container .pricing__item .pricing__item__title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 7rem; }
+  .explore__section .explore__section__header, .pricing__section .pricing__container .pricing__item .pricing__item__title .explore__section__header, .testimonials__section .pricing__container .pricing__item .pricing__item__title .explore__section__header {
+    width: 33rem; }
+    .explore__section .explore__section__header h1, .pricing__section .pricing__container .pricing__item .pricing__item__title .explore__section__header h1, .testimonials__section .pricing__container .pricing__item .pricing__item__title .explore__section__header h1 {
+      font-size: 5rem;
+      line-height: 1; }
+    .explore__section .explore__section__header p, .pricing__section .pricing__container .pricing__item .pricing__item__title .explore__section__header p, .testimonials__section .pricing__container .pricing__item .pricing__item__title .explore__section__header p {
+      color: white;
+      font-size: 1.05rem;
+      margin: 2rem auto; }
+
+.features__header, .pricing__section .pricing__header, .testimonials__section .pricing__header, .testimonials__section .testimonials__header, .screenshots__header, .download__section, .download__section .download__header, .news__section .news__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: unset;
+  align-items: center;
+  text-align: center; }
+  .features__header p, .pricing__section .pricing__header p, .testimonials__section .pricing__header p, .testimonials__section .testimonials__header p, .screenshots__header p, .download__section p, .download__section .download__header p, .news__section .news__header p {
+    width: 39rem;
+    margin-bottom: 6.5rem; }
+
+.features__container, .screenshots__container, .testimonials__section .testimonials__container, .testimonials__section .testimonials__container .testimonials__item, .news__section .news__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: unset;
+  margin-bottom: 8rem; }
+  .features__container .features__item, .screenshots__container .features__item, .testimonials__section .testimonials__container .features__item, .news__section .news__container .features__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: unset;
+    align-items: unset;
+    padding: 40px;
+    width: 14%;
+    background-color: white;
+    box-shadow: 5px 5px 20px 5px #e3e3e3; }
+    .features__container .features__item figure, .screenshots__container .features__item figure, .testimonials__section .testimonials__container .features__item figure, .news__section .news__container .features__item figure,
+    .features__container .features__item p,
+    .screenshots__container .features__item p,
+    .testimonials__section .testimonials__container .features__item p,
+    .news__section .news__container .features__item p {
+      margin: auto 0; }
+
+.interior__section1, .interior__section2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f5f8fd;
+  padding: 3rem; }
+  .interior__section1 .interior__container, .interior__section2 .interior__container {
+    width: 32rem; }
+    .interior__section1 .interior__container p, .interior__section2 .interior__container p {
+      margin: 2rem auto; }
+    .interior__section1 .interior__container button, .interior__section2 .interior__container button {
+      color: white;
+      background: linear-gradient(to left, #7c44fb, #b92dff); }
+
+.interior__section2 {
+  justify-content: center;
+  column-gap: 5rem;
+  background-color: white;
+  margin: 2rem auto; }
+
+.video__container {
+  position: relative;
+  padding: 0 4.5rem;
+  margin-bottom: 6rem; }
+  .video__container .play__btn {
+    position: absolute;
+    top: 41%;
+    right: 46%; }
+
+.pricing__section, .testimonials__section {
+  background-color: #f5f8fd;
+  padding: 7rem 4rem;
+  margin-bottom: 7rem; }
+  .pricing__section .pricing__header p, .testimonials__section .pricing__header p, .testimonials__section .testimonials__header p {
+    margin-bottom: 5rem; }
+  .pricing__section .pricing__container, .testimonials__section .pricing__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center; }
+    .pricing__section .pricing__container .pricing__item, .testimonials__section .pricing__container .pricing__item {
+      background-color: white; }
+      .pricing__section .pricing__container .pricing__item .pricing__item__title, .testimonials__section .pricing__container .pricing__item .pricing__item__title {
+        column-gap: 6rem;
+        line-height: 1.5;
+        margin: 0;
+        padding: 3rem;
+        border-bottom: 1px solid #e3e3e3; }
+      .pricing__section .pricing__container .pricing__item .pricing__list, .testimonials__section .pricing__container .pricing__item .pricing__list {
+        text-align: center;
+        line-height: 2.5;
+        margin: 2rem auto 3rem; }
+
+.screenshots__container {
+  position: relative;
+  height: 468px;
+  margin: auto 5rem 8rem; }
+  .screenshots__container .screenshot__imgs {
+    position: absolute;
+    visibility: hidden;
+    animation: img-slide ease-in-out 16s infinite; }
+  .screenshots__container .screenshot__img2 {
+    animation-delay: 4s; }
+  .screenshots__container .screenshot__img3 {
+    animation-delay: 8s; }
+  .screenshots__container .screenshot__img4 {
+    animation-delay: 12s; }
+
+@keyframes img-slide {
+  0% {
+    visibility: visible;
+    left: -5%;
+    opacity: 0; }
+  25% {
+    left: 360px;
+    opacity: 1; }
+  50% {
+    left: 720px;
+    opacity: 1; }
+  75% {
+    left: 1100px;
+    opacity: 0; }
+  100% {
+    left: -5%;
+    opacity: 0; } }
+
+.testimonials__section {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0;
+  padding-bottom: 23.5rem; }
+  .testimonials__section .testimonials__container {
+    position: absolute;
+    animation: testi-slide ease-in-out 10s infinite; }
+    .testimonials__section .testimonials__container .testimonials__item {
+      column-gap: 2rem;
+      margin: 2rem;
+      padding: 2.5rem;
+      width: 33rem;
+      background-color: white; }
+      .testimonials__section .testimonials__container .testimonials__item .testimonials__title > p {
+        margin-bottom: 0.5rem; }
+
+@keyframes testi-slide {
+  0% {
+    left: -98%; }
+  50% {
+    left: 0px; }
+  100% {
+    left: 98%; } }
+
+.download__section {
+  background: linear-gradient(to left, #7c44fb, #b92dff);
+  padding: 7.5rem 0 11rem;
+  margin-bottom: 9rem; }
+  .download__section .download__header {
+    color: white; }
+    .download__section .download__header p {
+      width: 53rem;
+      color: white;
+      margin-bottom: 1.5rem; }
+  .download__section .download__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: unset;
+    align-items: unset; }
+    .download__section .download__container button {
+      display: flex;
+      flex-direction: row;
+      justify-content: unset;
+      align-items: center;
+      column-gap: 1rem;
+      color: white;
+      background: transparent;
+      border: 1px solid white;
+      margin: 2rem 0.5rem;
+      padding: 1rem 2rem; }
+      .download__section .download__container button div {
+        display: flex;
+        flex-direction: column;
+        justify-content: unset;
+        align-items: baseline;
+        margin-right: 0.3rem; }
+        .download__section .download__container button div h3 {
+          font-size: 2rem;
+          font-weight: 600;
+          line-height: 1; }
+        .download__section .download__container button div span {
+          font-size: 1.1rem;
+          font-weight: 400; }
+
+.news__section {
+  padding: 7rem 4rem 0.5rem; }
+  .news__section .news__container .news__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: unset;
+    align-items: unset;
+    background-color: #f5f8fd;
+    padding: 4.5rem 1.5rem 4.5rem 2.5rem; }
+    .news__section .news__container .news__item h3 {
+      width: 21rem;
+      line-height: 1.4;
+      margin: 1rem 0; }
+    .news__section .news__container .news__item p:nth-child(1) {
+      border: 1px solid #e3e3e3;
+      background-color: white;
+      margin-bottom: 0.5rem;
+      padding: 0 1rem;
+      max-width: 6rem; }
+    .news__section .news__container .news__item p:nth-child(3) {
+      width: 19rem;
+      margin-bottom: 1.5rem; }
+    .news__section .news__container .news__item .news__icons {
+      display: flex;
+      flex-direction: row;
+      justify-content: unset;
+      align-items: baseline;
+      column-gap: 1.5rem;
+      list-style: none;
+      padding: 0; }
+      .news__section .news__container .news__item .news__icons li {
+        display: flex;
+        flex-direction: row;
+        justify-content: unset;
+        align-items: baseline;
+        color: #bbbbbc; }
+        .news__section .news__container .news__item .news__icons li p {
+          color: #bbbbbc;
+          margin-left: 0.5rem; }

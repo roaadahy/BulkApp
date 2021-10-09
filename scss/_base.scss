@@ -1,0 +1,330 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap");
+* {
+    font-family: $font;
+    margin: 0;
+}
+
+p {
+    color: $p-color;
+}
+
+h2 {
+    font-size: 2.5rem;
+    line-height: 1.5;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+button {
+    padding: 1rem 3.5rem;
+    margin-top: 1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+}
+
+.myHeader {
+    color: white;
+    height: 62.5rem;
+    padding: 2rem 5rem;
+    margin-bottom: 7.5rem;
+    @include bgimg( $bg-img: url("/assets/img/banner/home-banner.jpg"), $bg-pos: bottom center, $bg-repeat: no-repeat, $bg-size: cover);
+}
+
+.navbar {
+    @include flex($direction: row, $justify-content: space-between);
+    .navbar__links {
+        list-style: none;
+        font-weight: 600;
+        @include flex($direction: row);
+        li {
+            padding: 5px 20px;
+            a {
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+}
+
+.explore__section {
+    @include flex( $direction: row, $justify-content: space-between, $align-items: center);
+    margin-top: 7rem;
+    .explore__section__header {
+        width: 33rem;
+        h1 {
+            font-size: 5rem;
+            line-height: 1;
+        }
+        p {
+            color: white;
+            font-size: 1.05rem;
+            margin: 2rem auto;
+        }
+    }
+}
+
+.features__header {
+    @include flex($direction: column, $align-items: center);
+    text-align: center;
+    p {
+        width: 39rem;
+        margin-bottom: 6.5rem;
+    }
+}
+
+.features__container {
+    @include flex($direction: row, $justify-content: space-evenly);
+    margin-bottom: 8rem;
+    .features__item {
+        @include flex($direction: column);
+        padding: 40px;
+        width: 14%;
+        background-color: white;
+        box-shadow: 5px 5px 20px 5px $shadow-color;
+        figure,
+        p {
+            margin: auto 0;
+        }
+    }
+}
+
+.interior__section1 {
+    @include flex( $direction: row, $justify-content: space-around, $align-items: center);
+    background-color: $bg-color;
+    padding: 3rem;
+    .interior__container {
+        width: 32rem;
+        p {
+            margin: 2rem auto;
+        }
+        button {
+            @include btn( $txt-color: white, $bg-color: $btn-color);
+        }
+    }
+}
+
+.interior__section2 {
+    @extend .interior__section1;
+    justify-content: center;
+    column-gap: 5rem;
+    background-color: white;
+    margin: 2rem auto;
+}
+
+.video__container {
+    position: relative;
+    padding: 0 4.5rem;
+    margin-bottom: 6rem;
+    .play__btn {
+        position: absolute;
+        top: 41%;
+        right: 46%;
+    }
+}
+
+.pricing__section {
+    background-color: $bg-color;
+    padding: 7rem 4rem;
+    margin-bottom: 7rem;
+    .pricing__header {
+        @extend .features__header;
+        p {
+            margin-bottom: 5rem;
+        }
+    }
+    .pricing__container {
+        @include flex($direction: row, $justify-content: space-evenly, $align-items: center);
+        .pricing__item {
+            background-color: white;
+            .pricing__item__title {
+                @extend .explore__section;
+                column-gap: 6rem;
+                line-height: 1.5;
+                margin: 0;
+                padding: 3rem;
+                border-bottom: 1px solid $shadow-color;
+            }
+            .pricing__list {
+                text-align: center;
+                line-height: 2.5;
+                margin: 2rem auto 3rem;
+            }
+        }
+    }
+}
+
+.screenshots__header {
+    @extend .features__header;
+}
+
+.screenshots__container {
+    @extend .features__container;
+    position: relative;
+    height: 468px;
+    margin: auto 5rem 8rem;
+    .screenshot__imgs {
+        position: absolute;
+        visibility: hidden;
+        animation: img-slide ease-in-out 16s infinite;
+    }
+    .screenshot__img2 {
+        animation-delay: 4s;
+    }
+    .screenshot__img3 {
+        animation-delay: 8s;
+    }
+    .screenshot__img4 {
+        animation-delay: 12s;
+    }
+}
+
+@keyframes img-slide {
+    0% {
+        visibility: visible;
+        left: -5%;
+        opacity: 0;
+    }
+    25% {
+        left: 360px;
+        opacity: 1;
+    }
+    50% {
+        left: 720px;
+        opacity: 1;
+    }
+    75% {
+        left: 1100px;
+        opacity: 0;
+    }
+    100% {
+        left: -5%;
+        opacity: 0;
+    }
+}
+
+.testimonials__section {
+    @extend .pricing__section;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0;
+    padding-bottom: 23.5rem;
+    .testimonials__header {
+        @extend .pricing__header;
+    }
+    .testimonials__container {
+        @extend .features__container;
+        position: absolute;
+        animation: testi-slide ease-in-out 10s infinite;
+        .testimonials__item {
+            @extend .features__container;
+            column-gap: 2rem;
+            margin: 2rem;
+            padding: 2.5rem;
+            width: 33rem;
+            background-color: white;
+            .testimonials__title>p {
+                margin-bottom: 0.5rem;
+            }
+        }
+    }
+}
+
+@keyframes testi-slide {
+    0% {
+        left: -98%;
+    }
+    50% {
+        left: 0px;
+    }
+    100% {
+        left: 98%;
+    }
+}
+
+.download__section {
+    @extend .features__header;
+    background: $btn-color;
+    padding: 7.5rem 0 11rem;
+    margin-bottom: 9rem;
+    .download__header {
+        @extend .features__header;
+        color: white;
+        p {
+            width: 53rem;
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+    }
+    .download__container {
+        @include flex($direction: row);
+        button {
+            @include flex($direction: row, $align-items: center);
+            column-gap: 1rem;
+            @include btn($txt-color: white, $bg-color: transparent);
+            border: 1px solid white;
+            margin: 2rem 0.5rem;
+            padding: 1rem 2rem;
+            div {
+                @include flex($direction: column, $align-items: baseline);
+                margin-right: 0.3rem;
+                h3 {
+                    font-size: 2rem;
+                    font-weight: 600;
+                    line-height: 1;
+                }
+                span {
+                    font-size: 1.1rem;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
+.news__section {
+    padding: 7rem 4rem 0.5rem;
+    .news__header {
+        @extend .features__header;
+    }
+    .news__container {
+        @extend .features__container;
+        .news__item {
+            @include flex($direction: column);
+            background-color: $bg-color;
+            padding: 4.5rem 1.5rem 4.5rem 2.5rem;
+            h3 {
+                width: 21rem;
+                line-height: 1.4;
+                margin: 1rem 0;
+            }
+            p:nth-child(1) {
+                border: 1px solid $shadow-color;
+                background-color: white;
+                margin-bottom: 0.5rem;
+                padding: 0 1rem;
+                max-width: 6rem;
+            }
+            p:nth-child(3) {
+                width: 19rem;
+                margin-bottom: 1.5rem;
+            }
+            .news__icons {
+                @include flex($direction: row, $align-items: baseline);
+                column-gap: 1.5rem;
+                list-style: none;
+                padding: 0;
+                li {
+                    @include flex($direction: row, $align-items: baseline);
+                    color: $icon-color;
+                    p {
+                        color: $icon-color;
+                        margin-left: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
